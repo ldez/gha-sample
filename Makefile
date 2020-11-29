@@ -20,3 +20,8 @@ test: clean
 
 check:
 	golangci-lint run
+
+# ---
+
+docs-build:
+	hugo version
