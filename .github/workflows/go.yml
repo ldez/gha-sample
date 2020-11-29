@@ -42,6 +42,3 @@ jobs:
 
       - name: Build
         run: make build
-
-      - name: All
-        run: make
