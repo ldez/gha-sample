@@ -1,0 +1,17 @@
+name: Documentation
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  docs:
+    name: Hugo
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Hugo
+        run: |
+          wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.54.0/hugo_0.54.0_Linux-64bit.deb
+          sudo dpkg -i /tmp/hugo.deb
