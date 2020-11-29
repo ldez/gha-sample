@@ -36,11 +36,6 @@ jobs:
       - name: Get dependencies
         run: go mod download
 
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v2
-        with:
-          version: v1.33
-
       - name: Test
         run: make test
 
