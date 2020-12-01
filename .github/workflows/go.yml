@@ -46,8 +46,8 @@ jobs:
       - name: Build
         run: make build
 
-      - name: Install Pebble and challtestsrv
-        run: GO111MODULE=off go get -u github.com/letsencrypt/pebble/...
+      - name: Install golangci-lint
+        run: curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.33.0
 
-      - name: Pebble
-        run: pebble -h
+      - name: Run golangci-lint
+        run: golangci-lint version
