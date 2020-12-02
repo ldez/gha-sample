@@ -50,7 +50,7 @@ jobs:
         run: make test
 
       - name: Build
-        if: ${{ matrix.stable }}
+        if: matrix.stable
         run: make build
 
       # https://golangci-lint.run/usage/install#other-ci
