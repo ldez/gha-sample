@@ -50,7 +50,7 @@ jobs:
         run: make test
 
       - name: Build
-        if: ${{ matrix.stable }}
+        if: matrix.stable
         run: make build
 
       # https://golangci-lint.run/usage/install#other-ci
@@ -63,7 +63,7 @@ jobs:
       # https://goreleaser.com/ci/actions/
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: startsWith(github.ref, 'refs/tags/v') && matrix.stable
         with:
           version: latest
           args: release --rm-dist
