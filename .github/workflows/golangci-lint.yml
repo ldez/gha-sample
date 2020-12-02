@@ -19,6 +19,8 @@ jobs:
           go-version: ^1.15
 
       - uses: actions/checkout@v2
+
+      # https://github.com/golangci/golangci-lint-action
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
