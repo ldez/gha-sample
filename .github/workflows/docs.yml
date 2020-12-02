@@ -9,7 +9,6 @@ jobs:
   docs:
     name: Hugo
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - uses: actions/checkout@v2
 
