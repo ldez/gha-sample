@@ -30,10 +30,10 @@ jobs:
 
 #      # https://github.com/marketplace/actions/github-pages
 #      - name: Deploy to GitHub Pages
-#        if: success()
 #        uses: crazy-max/ghaction-github-pages@v2
+#        if: github.event_name == 'push'
 #        with:
 #          target_branch: gh-pages
-#          build_dir: public
+#          build_dir: docs/public
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
